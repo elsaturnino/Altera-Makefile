@@ -5,21 +5,20 @@
 # Settings File (.qsf)
 ###################################################################
 
-PROJECT = Example-Project
-TOP_LEVEL_ENTITY = top_level
+PROJECT = project01_sg
+TOP_LEVEL_ENTITY = project01_sg
 ASSIGNMENT_FILES = $(PROJECT).qpf $(PROJECT).qsf
 
 ###################################################################
-# Part, Family, Boardfile DE1 or DE2
-FAMILY = "Cyclone II"
-PART = EP2C35F672C6
-BOARDFILE = DE2Pins
+# Part, Family, Boardfile (DE0, DE1, or DE2)
+FAMILY = "Cyclone IV E"
+PART = EP4CE22F17C6
+BOARDFILE = DE0Pins
 ###################################################################
 
 ###################################################################
 # Setup your sources here
-SRCS = ../fpga/top_level.v \
-       ../fpga/nios.qsys
+SRCS = ../fpga/project01_sg.v
 
 ###################################################################
 # Main Targets
@@ -32,7 +31,8 @@ SRCS = ../fpga/top_level.v \
 all: smart.log $(PROJECT).asm.rpt $(PROJECT).sta.rpt 
 
 clean:
-	rm -rf *.rpt *.chg smart.log *.htm *.eqn *.pin *.sof *.pof db incremental_db
+	$(RM) *.rpt *.chg smart.log *.htm *.eqn *.pin *.sof *.pof db incremental_db *.summary \
+		$(ASSIGNMENT_FILES)
 
 map: smart.log $(PROJECT).map.rpt
 fit: smart.log $(PROJECT).fit.rpt
