@@ -1,7 +1,7 @@
 ###################################################################
 # Project Configuration: 
 # 
-# Specify the name of the design (project) and the Quartus II
+# Specify the name of the design (project) and the Quartus
 # Settings File (.qsf)
 ###################################################################
 
