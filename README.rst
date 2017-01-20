@@ -1,15 +1,15 @@
 ============================
- Altera Quartus II Makefile
+ Intel Quartus Prime Makefile
 ============================
 
-This can be used to compile your altera projects on the commandline,
+This can be used to compile your Intel/Altera Quartus projects via the commandline,
 i.e. without the GUI.
 
 Directory Layout
 ~~~~~~~~~~~~~~~~~
 
-As Quartus II will throw a lot of garbage into its project dir,
-a directory layout as follows was picked::
+As Quartus will generates many files in its project dir, a directory layout as
+follows was picked::
   
   fpga/
   nios/
